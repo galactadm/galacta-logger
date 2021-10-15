@@ -1,10 +1,24 @@
 //! Simple logger crate
 //!
 //! # Usage
+//!
+//! You can use logger without any initialization.
+//! You may set "G_LOG_LEVEL" environment variable by [`LevelFilter`] value.
+//! ```
+//! /// These are logs without specified target or initializations(recommended)
+//! use galacta_logger::{self,prelude::*};
+//! gerror!("This is errror");
+//! gwarn!("This is warning");
+//! ginfo!("This is info");
+//! gdebug!("This is debug");
+//! gtrace!("This is trace");
+//! ```
+//!
+//! You also can use logger with initialization.
 //! ```
 //! use galacta_logger::{self,GalactaLogger,LevelFilter,prelude::*};
 //! /// First initialize logger.
-//! /// You may set "G_LOG_LEVEL" environment variable
+//! /// You may set "G_LOG_LEVEL" environment variable by [`LevelFilter`] value.
 //! /// If environment variable is set, argument of init function will be ignored
 //! GalactaLogger::init(LevelFilter::Trace);
 //!
@@ -14,14 +28,8 @@
 //! info!("This is info");
 //! debug!("This is debug");
 //! trace!("This is trace");
-//!
-//! /// These are logs without specified target or initializations(recommended)
-//! gerror!("This is errror");
-//! gwarn!("This is warning");
-//! ginfo!("This is info");
-//! gdebug!("This is debug");
-//! gtrace!("This is trace");
 //! ```
+//!
 #![warn(missing_docs)]
 #![warn(rustdoc::missing_crate_level_docs)]
 #![allow(unused_imports)]

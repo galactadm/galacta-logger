@@ -2,6 +2,13 @@
 name = "galacta-logger"
 version = "0.1.0"
 edition = "2018"
+license = "MIT"
+authors = ["Kazuhiro Tamura <galactadm@gmail.com>"]
+description = "A simple logger that doesn't need initialization. This crate gives logged time, log level, file path, module path, and function name."
+repository = "https://github.com/galactadm/galacta-logger"
+homepage = "https://crates.io/crates/galacta-logger"
+readme = "README.md"
+keywords = ["log","logging"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
