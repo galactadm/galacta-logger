@@ -4,7 +4,7 @@
 //! ```
 //! use galacta_logger::{self,GalactaLogger,LevelFilter,prelude::*};
 //! /// First initialize logger.
-//! /// You may set "GALACTA_LOG_LEVEL" environment variable
+//! /// You may set "G_LOG_LEVEL" environment variable
 //! /// If environment variable is set, argument of init function will be ignored
 //! GalactaLogger::init(LevelFilter::Trace);
 //!
@@ -139,7 +139,7 @@ impl GalactaLogger {
     /// "default_max_level" for setting max level of logging.
     /// Environment variable overrides inline variable.
     pub fn init(default_max_level: LevelFilter) -> Result<(), SetLoggerError> {
-        match env::var("GALACTA_LOG_LEVEL") {
+        match env::var("G_LOG_LEVEL") {
             Ok(val) => {
                 let env_max_level =
                     LevelFilter::from_str(val.as_str()).unwrap_or_else(|_| LevelFilter::max());
