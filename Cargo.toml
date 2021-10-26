@@ -1,7 +1,7 @@
 [package]
 name = "galacta-logger"
 version = "0.1.0"
-edition = "2018"
+edition = "2021"
 license = "MIT"
 authors = ["Kazuhiro Tamura <galactadm@gmail.com>"]
 description = "A simple logger that doesn't need initialization. This crate gives logged time, log level, file path, module path, and function name."
