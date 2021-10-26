@@ -24,3 +24,10 @@ ginfo!("This is info");
 gdebug!("This is debug");
 gtrace!("This is trace");
 ```
+
+# Output sample
+```
+[2021-10-26 20:38:03] [TRACE] galacta_logger::tests::test_gdebug
+This is gtrace
+galacta_logger::tests (src/lib.rs:229)
+```
